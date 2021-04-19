@@ -41,7 +41,7 @@ public class UserController extends LoggerUtils {
     }
 
     // 이메일 중복 체크
-    @GetMapping(value = "/check/account/{email}")
+    @GetMapping(value = "/check/email/{email}")
     public ResponseEntity<?> checkDuplicateEmail(@PathVariable String email) {
         logger.info("checkDuplicateEmail request : email = " + email);
         boolean result = false;
@@ -57,7 +57,7 @@ public class UserController extends LoggerUtils {
     }
 
     // 닉네임 중복 체크
-    @GetMapping(value = "/check/account/{nickname}")
+    @GetMapping(value = "/check/nickname/{nickname}")
     public ResponseEntity<?> checkDuplicateNickname(@PathVariable String nickname) {
         logger.info("checkDuplicateNickname request : nickname = " + nickname);
         boolean result = false;

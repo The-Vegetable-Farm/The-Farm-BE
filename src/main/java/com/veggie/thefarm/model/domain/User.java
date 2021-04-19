@@ -33,9 +33,6 @@ public class User {
     @Column(name = "EMAIL")
     private String email;                   // 이메일
 
-    @Column(name = "CERT_NUM")
-    private String certNum;                 // 인증번호
-
     @Column(name = "CHARACTER_CNT")
     private int characterCnt;               // 보유 캐릭터 수
 
