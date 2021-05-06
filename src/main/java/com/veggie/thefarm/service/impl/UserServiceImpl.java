@@ -86,22 +86,26 @@ public class UserServiceImpl extends LoggerUtils implements UserService {
 
         if (StringUtils.isEmpty(account)) {
             requestJson.put("result", ConstValue.RESULT_N);
+            requestJson.put("message", "account is empty");
             return requestJson;
         }
 
         if (StringUtils.isEmpty(password) || password.length() < 8 || password.length() > 15) {
             // 비밀번호 8~14자리
             requestJson.put("result", ConstValue.RESULT_N);
+            requestJson.put("message", "password error : length = 8~14");
             return requestJson;
         }
 
         if (StringUtils.isEmpty(nickname)) {
             requestJson.put("result", ConstValue.RESULT_N);
+            requestJson.put("message", "nickname is empty");
             return requestJson;
         }
 
         if (StringUtils.isEmpty(email)) {
             requestJson.put("result", ConstValue.RESULT_N);
+            requestJson.put("message", "email is empty");
             return requestJson;
         }
 
